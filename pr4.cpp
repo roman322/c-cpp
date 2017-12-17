@@ -15,9 +15,9 @@ private:
 public:
  void InputMatrix();
  void OutputMatrix();
- void Sort();
+ void InsertionSort();
  void AverageArihmetic();
- void MuitiplicationOfAvAr(double *);
+ void ProductAverageArithmetic(double *);
 };
 void Matrix::InputMatrix()
 {
@@ -41,9 +41,9 @@ void Matrix::OutputMatrix()
    ;
   std::cout « endl;
  }
- Sort();
+ InsertionSort();
 }
-void Matrix::Sort()
+void Matrix::InsertionSort()
 {
 
  int a = 5;
@@ -85,17 +85,17 @@ void Matrix::AverageArihmetic()
   std::cout << "Sum of column " <<i + 1 << " = ";
   std::cout << sum[i] << endl;
  }
- MuitiplicationOfAvAr(sum);
+ ProductAverageArithmetic(sum);
 }
 
-void Matrix::MuitiplicationOfAvAr(double*ptr)
+void Matrix::ProductAverageArithmetic(double*ptr)
 {
- double Multiplication = 1;
+ double Product = 1;
  for (int i = 0; i < R - 1; i++)
  {
-  Multiplication = Multiplication*ptr[i];
+  Product = Product*ptr[i];
  }
- std::cout << "MuitiplicationOfAverageArihmetic= " << Multiplication« endl;
+ std::cout << "ProductOfAverageArihmetic= " << Product« endl;
 }
 
 
@@ -108,8 +108,8 @@ void main(void)
  A.InputMatrix();
  std::cout << "\nnewInput Matrix A" << endl;
  A.OutputMatrix();
- A.Sort();
- std::cout << "\nnewSorted Matrix A" << endl;
+ A.InsertionSort();
+ std::cout << "\nnewInsertionSorted Matrix A" << endl;
  A.OutputMatrix();
  std::cout << "\nAverageArihmetic = "<<endl;
  A.AverageArihmetic();
